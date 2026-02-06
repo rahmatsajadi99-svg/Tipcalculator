@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/output.css" rel="stylesheet">
+</head>
+<body class="bg-slate-900">
+    <div class="max-w-sm  bg-blue-200 container mx-auto sm:max-w-full sm:h-screen">
+      <!--Title-->
+      <div class="text-center pt-10">
+        <p class="tracking-widest uppercase text-lg font-bold text-slate-600">spli</p>
+        <p class="tracking-widest uppercase text-lg font-bold text-slate-600">tter</p>
+      </div>
+      <!--Main-->
+      <div class="w-full bg-white mt-10 rounded-t-2xl container p-5
+           sm:flex  sm:w-180 sm:mx-auto sm:rounded-2xl sm:justify-between sm:p-6">
+      <!--left part--> 
+      <div class="sm:w-80">
+        <!--Bill-->
+          <section class="mt-3 relative">
+           <label class="text-slate-500 font-semibold block mb-1" for="">Bill</label>
+           <input id="Bill" type="text" class="bg-blue-50 w-full rounded-lg p-2 text-right pr-3 outline-none
+                              hover:border-blue-100 hover:border-2 font-black" placeholder="0">
+             <img class="absolute top-11 left-3 w-2 h-3" src="./images/icon-dollar.svg" alt="">
+          </section>
+          <!--Select Tip-->
+           <section class="mt-7 relative">
+            <label class="text-slate-500 font-semibold block mb-2" for="">Select Tip %</label>
+              <div class="grid grid-cols-2 items-center justify-baseline text-center gap-4">
+                <button class=" btn bg-teal-900 text-white font-bold p-2 hover:cursor-pointer rounded-lg" value="5">5%</button>
+                <button class=" btn bg-teal-900 text-white font-bold  p-2 hover:cursor-pointer rounded-lg" value="10">10%</button>
+                <button class=" btn bg-teal-900 text-white font-bold  p-2 hover:cursor-pointer rounded-lg" value="15" >15%</button>
+                <button class=" btn bg-teal-900 text-white font-bold  p-2 hover:cursor-pointer rounded-lg" value="20">20%</button>
+                <button class=" btn bg-teal-900 text-white font-bold  p-2 hover:cursor-pointer rounded-lg" value="50">50%</button>
+                <input id="Custom" class="bg-blue-50 font-bold text-slate-500 p-2 hover:cursor-pointer rounded-lg
+                             hover:border-2 border-teal-500 focus:outline-0 " placeholder="Custom">
+              </div>
+          </section>
+          <!--Number of people-->
+         <section class="mt-5 relative">
+            <div class="flex justify-between mb-1">
+                <label class="text-slate-500 font-semibold block mb-1 inline" for="">Number of people</label>
+                <span id="error" class=" text-red-400"></span>
+            </div>
+           <input id="NPeople" type="text" class=" bg-blue-50 w-full rounded-lg p-2 text-right pr-3 outline-none
+                              hover:border-blue-100 hover:border-2 font-black" placeholder="0">
+             <img class="absolute top-11 left-3 w-3 h-3" src="./images/icon-person.svg" alt="">
+          </section>
+        </div>
+        <!--right part-->
+        <div class="sm:w-80 "> 
+        <!--Result-->
+          <section class="mt-7">
+               <div class="grid grid-cols-2 items-end  justify-around  bg-teal-900 gap-4 py-7 container p-4 rounded-lg">
+                   <span>
+                     <p class="font-semibold text-white">Tip Amount</p>
+                     <p class="text-slate-400">/person</p>
+                   </span>
+                   <span class="font-bold text-right text-3xl">
+                       <span class="text-teal-500 ">
+                         <span class="mr-[-5px] ">$</span>
+                         <span id="Tip" class="">0.00</span>
+                      </span>
+                   </span>
+                   <span>
+                    <p class="font-semibold text-white">Total</p>
+                     <p class="text-slate-400">/person</p>
+                   </span>
+                   <span class="font-bold text-right text-3xl">
+                      <span class="text-teal-500">
+                         <span  class="mr-[-5px]">$</span>
+                         <span id="Totale" class="">0.00</span>
+                      </span>
+                      
+                   </span>
+                   <button id="reset" class=" bg-teal-800 text-center text-slate-700 col-span-2 font-bold p-2 
+                      cursor-pointer uppercase rounded-lg hover:bg-teal-500 sm:mt-35 ">Reset</button>
+              </div>
+            
+          </section>
+        </div> 
+      </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
